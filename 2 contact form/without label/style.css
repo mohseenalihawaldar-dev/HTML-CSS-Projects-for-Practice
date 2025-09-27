@@ -1,0 +1,96 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+body {
+  background: #1a1a1a;
+  color: #f3f4f6;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.container {
+  width: 100%;
+  max-width: 600px;
+}
+
+.form-container {
+  background: #252525;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  background: #333;
+  color: #f3f4f6;
+  font-size: 1rem;
+}
+
+textarea {
+  height: 120px;
+  resize: none; /* no more dragging textarea it will be fixed*/
+}
+
+input:focus,
+textarea:focus {
+  outline: 2px solid #4ade80;
+} /* highlights when typing inside the input textarea*/
+
+button {
+  background: #47ee84; /* green button */
+  color: #000; /* black text */
+  font-weight: bold;
+  font-size: 1rem;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s ease; /* smooth hover effect */
+}
+
+button:hover {
+  background: #22c55e; /* darker green on hover */
+}
+
+button:active {
+  transform: scale(0.98); /* small press effect */
+}
+
+h1 {
+  color: #4ade80;
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+p {
+  color: #9ca3af;
+  margin-bottom: 20px;
+  font-size: 0.95rem;
+}
+
+@media (max-width: 600px) {
+  .form-container {
+    padding: 20px;
+  }
+  .h1 {
+    font-size: 1.6rem;
+  }
+}

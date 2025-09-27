@@ -1,0 +1,151 @@
+* {
+  margin: 0px;
+  padding: 0px;
+}
+:root {
+  --gold-light: #ffd700; /* bright golden */
+  --gold-soft: #ffcc33; /* softer gold */
+  --text-light: #f0e6c8; /* soft readable text */
+  --bg-dark: #121212; /* page background */
+  --card-dark: #1e1e1e; /* container background */
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  margin: 0px;
+  padding: 0px;
+  background: var(--bg-dark);
+  line-height: 1.7;
+  color: var(--text-light);
+}
+
+.container {
+  display: flex;
+  align-items: flex-start;
+  gap: 40px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.6);
+  padding: 20px;
+  background: var(--card-dark);
+  border-radius: 15px;
+  max-width: 1000px;
+  margin: 50px auto;
+  padding: 20px;
+  border: 1px solid rgba(255, 215, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.container:hover {
+  transform: translateX(-6px);
+  box-shadow: 0 12px 30px rgba(255, 215, 0, 0.25);
+}
+
+.profile-img {
+  height: auto;
+  width: 220px;
+  border-radius: 15px;
+  object-fit: cover; /* keeps proportions inside the box */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  flex-shrink: 0;
+  border: 3px solid transparent;
+  background-image: linear-gradient(
+    145deg,
+    var(--gold-light),
+    var(--gold-soft)
+  );
+  background-origin: border-box;
+  box-shadow: 0 6px 18px rgba(255, 200, 50, 0.35);
+}
+
+.profile-img:hover {
+  transform: scale(1.05); /* zoom in slightly */
+  box-shadow: 0 6px 15px rgba(215, 215, 0, 0.4); /* golden-glow */
+}
+
+.content {
+  flex: 1;
+}
+
+.social-links {
+  margin-top: 20px;
+}
+
+.social-links a {
+  text-decoration: none;
+  margin: 15px;
+  font-size: 24px;
+  color: #ffd035;
+  transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+  color: #ffd700;
+}
+
+h1,
+h2 {
+  color: #ffd700; /* Bright gold headings */
+}
+
+.highlight {
+  color: #ffcc33;
+  font-weight: bold;
+}
+
+/* making it responsive design */
+
+/* =========================
+   Step 6 – Responsive Design
+   ========================= */
+@media (max-width: 768px) {
+  body {
+    overflow-x: hidden;
+  }
+  .container {
+    flex-direction: column; /* stack image and text */
+    text-align: center;
+    padding: 30px;
+    box-sizing: border-box;
+  }
+
+  .profile-img {
+    margin: 0 auto 20px; /* center the image */
+    width: 200px;
+    max-width: 100%;
+    height: au;
+    height: 200px;
+  }
+
+  .content {
+    text-align: center;
+  }
+
+  .social-links {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+  }
+
+  .social-links a {
+    font-size: 24px; /* slightly smaller for mobile */
+  }
+}
+
+@media (max-width: 480px) {
+  .profile-img {
+    width: 160px;
+    height: 160px;
+  }
+
+  h1 {
+    font-size: 1.8rem;
+  }
+
+  h2 {
+    font-size: 1.3rem;
+  }
+
+  p {
+    font-size: 0.95rem;
+  }
+}
